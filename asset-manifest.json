@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/://victordlh29.github.io/Reacs/static/css/main.e6c13ad2.css",
+    "main.js": "/://victordlh29.github.io/Reacs/static/js/main.69b78a8b.js",
+    "index.html": "/://victordlh29.github.io/Reacs/index.html",
+    "main.e6c13ad2.css.map": "/://victordlh29.github.io/Reacs/static/css/main.e6c13ad2.css.map",
+    "main.69b78a8b.js.map": "/://victordlh29.github.io/Reacs/static/js/main.69b78a8b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.69b78a8b.js"
+  ]
+}
