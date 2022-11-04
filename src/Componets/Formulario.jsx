@@ -6,7 +6,7 @@ export const Formulario = () => {
     const [apellido, setApellido] = React.useState("")
     const [lista, setLista] = React.useState([])
 
-
+console.log(lista);
     const Agregarusuario = (e)=>{
         e.preventDefault()
 
@@ -42,9 +42,9 @@ export const Formulario = () => {
 
     const EdicionFinal = (e) =>{
        e.preventDefault()
-        const editado = lista.map(i => i.nombre === nombre  ? { nombre , apellido } : i)
+        const editado = lista.map(i => (i.nombre === nombre, apellido)  ? { nombre , apellido } : i) 
         console.log(editado);
-        setLista(editado)
+        setLista(editado) 
         SetModoedicion(false)
         setNombre("")
         setApellido("")
@@ -57,15 +57,19 @@ export const Formulario = () => {
                 <input onChange={(e) => setNombre(e.target.value)} type="text" placeholder='Ingresar nombre' value={nombre}/>
                 <input onChange={(e) => setApellido(e.target.value)} type="text" placeholder='Ingresar apellido' value={apellido}/>
               <div>
+                 
                     {
                         modoedicion ?(
 
                             <button className='btn btn-success' type='submit' onClick={(e)=>{EdicionFinal(e)}}>Editar</button> 
+                            
                         ):
                         (
                             <button className='btn btn-success' type='submit' onClick={(e)=>{Agregarusuario(e)}}>Enviar</button> 
+                            
                         )
                     }
+                    
               </div>
 
             </form>
@@ -74,13 +78,12 @@ export const Formulario = () => {
                 <ol>
                     {
                         lista.map(i => (<li key={i}>{i.nombre} {i.apellido} <button className='btn btn-warning' onClick={()=>{PrimeraEdicion(i)}}>Editar</button> <button className='btn btn-danger' onClick={() => eliminar(i.apellido)}>Eliminar</button></li>))
-                        
+                      
                     }
                 </ol>
             </div>      
         </div>
     )
-
  }
 
 
