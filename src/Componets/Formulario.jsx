@@ -6,7 +6,7 @@ export const Formulario = () => {
     const [apellido, setApellido] = React.useState("")
     const [lista, setLista] = React.useState([])
 
-console.log(lista);
+
     const Agregarusuario = (e)=>{
         e.preventDefault()
 
@@ -42,8 +42,7 @@ console.log(lista);
 
     const EdicionFinal = (e) =>{
        e.preventDefault()
-        const editado = lista.map(i => (i.nombre === nombre, apellido)  ? { nombre , apellido } : i) 
-        console.log(editado);
+        const editado = lista.map(i => (i.nombre === nombre, apellido)  ? { nombre , apellido } : i)
         setLista(editado) 
         SetModoedicion(false)
         setNombre("")
